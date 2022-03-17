@@ -1,2 +1,0 @@
-# pupVete
- Proyecto-Grupo
