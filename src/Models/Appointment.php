@@ -5,7 +5,7 @@ namespace App\Models;
 use App\Database;
 
 class Appointment {  
-    private int $id; 
+    private ?int $id; 
     private string $name;
     private string $species;
     private string $breed;
@@ -22,20 +22,20 @@ class Appointment {
     private $database;
     private $table = 'appointmentsvet';
 
-    public function __constructor(
+    public function __construct(
         int $id = null,
-        string $name,
-        string $species,
-        string $breed,
-        string $date,
-        string $time,
-        string $reason,
-        string $description,
-        string $person,
-        string $phone,
-        string $mail,
-        string $created_at = "",
-        string $updated_at = ""
+        string $name = '',
+        string $species = '',
+        string $breed = '',
+        string $date = '',
+        string $time = '',
+        string $reason = '',
+        string $description = '',
+        string $person = '',
+        string $phone = '',
+        string $mail = '',
+        string $created_at = '',
+        string $updated_at = ''
     ) {
         $this->id = $id;
         $this->name = $name;
@@ -52,12 +52,12 @@ class Appointment {
         $this->updated_at = $updated_at;
 
         if (!$this->database) {
-            $this->database = new Database;
+            $this->database = new Database();
         }
     }
 
     public function all() {
-        $query = $this->database->mysql->query("SELECT * FROM $this->table");
+        $query = $this->database->mysql->query("SELECT * FROM {$this->table}");
         $appointmentsArray = $query->fetchAll();
 
         $appointmentsList = [];
@@ -82,6 +82,58 @@ class Appointment {
         }
 
         return $appointmentsList;
+    }
+
+    function getId() {
+        return $this->id;
+    }
+
+    function getName() {
+        return $this->name;
+    }
+
+    function getSpecies() {
+        return $this->species;
+    }
+
+    function getBreed() {
+        return $this->breed;
+    }
+
+    function getDate() {
+        return $this->date;
+    }
+
+    function getTime() {
+        return $this->time;
+    }
+
+    function getReason() {
+        return $this->reason;
+    }
+
+    function getDescription() {
+        return $this->description;
+    }
+
+    function getPerson() {
+        return $this->person;
+    }
+
+    function getPhone() {
+        return $this->phone;
+    }
+
+    function getMail() {
+        return $this->mail;
+    }
+
+    function getCreatedAt() {
+        return $this->created_at;
+    }
+
+    function getUpdatedAt() {
+        return $this->updated_at;
     }
 }
 

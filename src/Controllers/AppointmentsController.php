@@ -14,7 +14,7 @@ class AppointmentsController {
         $appointment = new Appointment;
         $appointments = $appointment->all();
 
-        new View("appointmentsView", ["appointment" => $appointments]);
+        new View("appointmentsView", ["appointments" => $appointments]);
     }
 }
 
