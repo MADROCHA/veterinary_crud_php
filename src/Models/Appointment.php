@@ -23,7 +23,7 @@ class Appointment {
     private $table = 'appointmentsvet';
 
     public function __constructor(
-        int $id,
+        int $id = null,
         string $name,
         string $species,
         string $breed,
@@ -34,8 +34,8 @@ class Appointment {
         string $person,
         string $phone,
         string $mail,
-        string $created_at,
-        string $updated_at
+        string $created_at = "",
+        string $updated_at = ""
     ) {
         $this->id = $id;
         $this->name = $name;
@@ -58,6 +58,30 @@ class Appointment {
 
     public function all() {
         $query = $this->database->mysql->query("SELECT * FROM $this->table");
+        $appointmentsArray = $query->fetchAll();
+
+        $appointmentsList = [];
+        foreach($appointmentsArray as $appointment) {
+            $appointmentItem = new Appointment(
+                $appointment['id'],
+                $appointment['name'],
+                $appointment['species'],
+                $appointment['breed'],
+                $appointment['date'],
+                $appointment['time'],
+                $appointment['reason'],
+                $appointment['description'],
+                $appointment['person'],
+                $appointment['phone'],
+                $appointment['mail'],
+                $appointment['created_at'],
+                $appointment['updated_at']
+            );
+
+            array_push($appointmentsList, $appointmentItem);
+        }
+
+        return $appointmentsList;
     }
 }
 
