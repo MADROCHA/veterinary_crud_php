@@ -20,7 +20,7 @@ class Database {
   private function getConnection() {
     $host = 'localhost';
     $user = 'root';
-    $pass = '';
+    $pass = 'root';
     $database = 'veterinary';
 
     $charset = 'utf8';
