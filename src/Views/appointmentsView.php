@@ -3,7 +3,15 @@
     <h1>Hola</h1>
     <?php
         foreach ($data["appointments"] as $appointment) {
-            echo "<p>{$appointment->getName()}</p>";
+            echo <<<TAG
+            <p class="bg-pink-500">{$appointment->getName()}</p>
+            <p>{$appointment->getSpecies()}</p>
+            <p>{$appointment->getDate()}</p>
+            <p>{$appointment->getBreed()}</p>
+            <p>{$appointment->getName()}</p>
+            
+            TAG;
+
         }
     ?>
 </main>
