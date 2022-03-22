@@ -1,4 +1,4 @@
-<?php require_once('src\Views\Components\layout.php') ?>
+<?php require_once('src\Views\Components\layout.php'); ?>
 <main class="p-5">
     <h1 class="text-xl font-bold uppercase text-center">Citas animalillos</h1>
     <div class="grid gap-4 justify-around my-5 lg:grid-cols-2">
@@ -42,8 +42,8 @@
                       <p>{$appointment->getTime()}</p>
                     </div>
                     <div class="-mt-4 -mr-6 w-12 rounded-bl-xl flex flex-col justify-between border-l-2 border-b-2 border-{$color} overflow-hidden">
-                      <div class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer border-b-2 border-{$color}">X</div>
-                      <div class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer">e</div>
+                      <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer border-b-2 border-{$color}" href='?action=delete&id={$appointment->getId()}'>X</a>
+                      <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer">e</a>
                     </div>
                   </div>
                   <div class="my-2">
@@ -65,6 +65,9 @@
             }
         ?>
     </div>
+    <div class="absolute bottom-6 right-5">
+        <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="?action=create" href='?action=create'>New appointment</a>
+    </div>
 </main>
 
-<?php require_once('src\Views\Components\footer.php') ?>
+<?php require_once('src\Views\Components\footer.php'); ?>

@@ -7,6 +7,6 @@
     <title>Puppy Vet</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="relative min-h-screen">
 
 <?php require_once('header.php'); ?>
