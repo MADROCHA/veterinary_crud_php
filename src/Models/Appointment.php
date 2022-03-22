@@ -165,6 +165,34 @@ class Appointment {
     function save() {
         $this->database->mysql->query("INSERT INTO {$this->table} (`name`, `species`, `breed`, `date`, `time`, `reason`, `description`, `person`, `phone`, `mail`) VALUES ('{$this->name}', '{$this->species}', '{$this->breed}', '{$this->date}', '{$this->time}', '{$this->reason}', '{$this->description}', '{$this->person}', '{$this->phone}', '{$this->mail}');");
     }
+
+    function rename(
+        $name,
+        $species,
+        $breed,
+        $date,
+        $time,
+        $reason,
+        $description,
+        $person,
+        $phone,
+        $mail
+    ) {
+        $this->name = $name;
+        $this->species = $species;
+        $this->breed = $breed;
+        $this->date = $date;
+        $this->time = $time;
+        $this->reason = $reason;
+        $this->description = $description;
+        $this->person = $person;
+        $this->phone = $phone;
+        $this->mail = $mail;
+    }
+
+    function update() {
+        $this->database->mysql->query("UPDATE {$this->table} SET `name` = '{$this->name}', `species` = '{$this->species}', `breed` = '{$this->breed}', `date` = '{$this->date}', `time` = '{$this->time}', `reason` = '{$this->reason}', `description` = '{$this->description}', `person` = '{$this->person}', `phone` = '{$this->phone}', `mail` = '{$this->mail}' WHERE id = {$this->id}");
+    }
 }
 
 ?>

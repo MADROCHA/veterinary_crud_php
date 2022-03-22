@@ -22,6 +22,16 @@ class AppointmentsController {
             return;
         }
 
+        if (isset($_GET['action']) && ($_GET['action'] == 'edit')) {
+            $this->edit($_GET["id"]);
+            return;
+        }
+
+        if (isset($_GET['action']) && ($_GET['action'] == 'update')) {
+            $this->update($_POST, $_GET["id"]);
+            return;
+        }
+
         $this->index();   
     }
     
@@ -62,6 +72,34 @@ class AppointmentsController {
         );
 
         $newAppointment->save();
+        $this->index();
+    }
+
+    public function edit($id) {
+        $appointmentEdit = new Appointment();
+        $appointment = $appointmentEdit->findById($id);
+
+        new View('editAppointment', ['appointment' => $appointment]);
+    }
+
+    public function update(array $request, $id) {
+        $appointmentUpdate = new Appointment();
+        $appointment = $appointmentUpdate->findById($id);
+
+        $appointment->rename(
+            $request['name'],
+            $request['species'],
+            $request['breed'],
+            $request['date'],
+            $request['time'],
+            $request['reason'],
+            $request['description'],
+            $request['person'],
+            $request['phone'],
+            $request['mail']
+        );
+
+        $appointment->update();
         $this->index();
     }
 }

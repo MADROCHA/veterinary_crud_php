@@ -43,7 +43,7 @@
                     </div>
                     <div class="-mt-4 -mr-6 w-12 rounded-bl-xl flex flex-col justify-between border-l-2 border-b-2 border-{$color} overflow-hidden">
                       <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer border-b-2 border-{$color}" href='?action=delete&id={$appointment->getId()}'>X</a>
-                      <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer">e</a>
+                      <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer" href='?action=edit&id={$appointment->getId()}'>e</a>
                     </div>
                   </div>
                   <div class="my-2">
@@ -65,7 +65,7 @@
             }
         ?>
     </div>
-    <div class="absolute bottom-6 right-5">
+    <div class="fixed bottom-6 right-5">
         <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="?action=create" href='?action=create'>New appointment</a>
     </div>
 </main>
