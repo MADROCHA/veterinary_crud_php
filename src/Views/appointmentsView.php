@@ -5,14 +5,31 @@
         <?php
             foreach ($data["appointments"] as $appointment) {
                 $printBreed = "";
+                $color = "";
                 if ($appointment->getBreed() != "") {
                     $printBreed = " - <span>{$appointment->getBreed()}</span>";
                 }
+                
+                if ($appointment->getSpecies() == "dog") {
+                    $color = "[#f7d08a]";
+                }
+                if ($appointment->getSpecies() == "cat") {
+                    $color = "[#f79f79]";
+                }
+                if ($appointment->getSpecies() == "reptile") {
+                    $color = "[#87b6a7]";
+                }
+                if ($appointment->getSpecies() == "bird") {
+                    $color = "[#c7aaec]";
+                }
+                if ($appointment->getSpecies() == "unicorn") {
+                    $color = "[#afc2d5]";
+                }
                 // print id, name, species, breed, date, time, reason, description, person, phone, mail, created_at, updated_at
                 echo <<<TAG
-                  <div class="border-2 border-sky-400 max-w-2xl rounded-3xl overflow-hidden px-6 py-4 hover:shadow-lg hover:shadow-sky-400/40 place-self-stretch">
+                  <div class="border-2 border-{$color} max-w-2xl rounded-3xl overflow-hidden px-6 py-4 hover:shadow-lg hover:shadow-{$color}/40 place-self-stretch">
                   <div class="flex justify-between">
-                    <div class="bg-sky-400 -mt-4 -ml-6 px-6 py-4 rounded-br-3xl flex-1">
+                    <div class="bg-{$color} -mt-4 -ml-6 px-6 py-4 rounded-br-3xl flex-1">
                       <h2 class="text-4xl font-black">{$appointment->getName()}</h2>
                       <p class="text-lg">
                         <span>{$appointment->getSpecies()}</span>
