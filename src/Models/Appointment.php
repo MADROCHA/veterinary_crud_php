@@ -163,7 +163,7 @@ class Appointment {
     }
 
     function save() {
-        $this->database->mysql->query("INSERT INTO `{$this->table}` (`name`, `species`, `breed`, `date`, `time`, `reason`, `description`, `person`, `phone`, `mail`) VALUES ('{$this->name}', '{$this->species}', '{$this->breed}', '{$this->date}', '{$this->time}', '{$this->reason}', '{$this->description}', '{$this->person}', '{$this->phone}', '{$this->mail}');");
+        $this->database->mysql->query("INSERT INTO {$this->table} (`name`, `species`, `breed`, `date`, `time`, `reason`, `description`, `person`, `phone`, `mail`) VALUES ('{$this->name}', '{$this->species}', '{$this->breed}', '{$this->date}', '{$this->time}', '{$this->reason}', '{$this->description}', '{$this->person}', '{$this->phone}', '{$this->mail}');");
     }
 }
 

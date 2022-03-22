@@ -40,11 +40,11 @@ class AppointmentsController {
         $this->index();
     }
 
-    function create() {
+    public function create() {
         new View('createAppointment');
     }
 
-    function store(array $request) {
+    public function store(array $request) {
         $newAppointment = new Appointment(
             null,
             $request['name'],

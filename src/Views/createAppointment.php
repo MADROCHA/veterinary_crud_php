@@ -1,48 +1,34 @@
 <?php require_once('src\Views\Components\layout.php'); ?>
 
 <main class="p-5">
-    <form action="?action=store" method="POST">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+    <form action="?action=store" method="POST" class="flex flex-col gap-5">
+        <div class="grid grid-cols-3">
+            <div class="span-1 flex flex-col gap-2">
+                <label for="name">Name</label>
+                <label for="species">Species</label>
+                <label for="breed">Breed</label>
+                <label for="date">Date</label>
+                <label for="time">Time</label>
+                <label for="reason">Reason</label>
+                <label for="description">Description</label>
+                <label for="person">Person</label>
+                <label for="phone">Phone</label>
+                <label for="mail">Mail</label>
+            </div>
+            <div class="span-2 flex flex-col gap-2">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                <input type="text" class="form-control" id="species" name="species" placeholder="Species">
+                <input type="text" class="form-control" id="breed" name="breed" placeholder="Breed">
+                <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                <input type="time" class="form-control" id="time" name="time" placeholder="Time">
+                <input type="text" class="form-control" id="reason" name="reason" placeholder="Reason">
+                <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+                <input type="text" class="form-control" id="person" name="person" placeholder="Person">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+                <input type="text" class="form-control" id="mail" name="mail" placeholder="Mail">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="species">Species</label>
-            <input type="text" class="form-control" id="species" name="species" placeholder="Species">
-        </div>
-        <div class="form-group">
-            <label for="breed">Breed</label>
-            <input type="text" class="form-control" id="breed" name="breed" placeholder="Breed">
-        </div>
-        <div class="form-group">
-            <label for="date">Date</label>
-            <input type="date" class="form-control" id="date" name="date" placeholder="Date">
-        </div>
-        <div class="form-group">
-            <label for="time">Time</label>
-            <input type="time" class="form-control" id="time" name="time" placeholder="Time">
-        </div>
-        <div class="form-group">
-            <label for="reason">Reason</label>
-            <input type="text" class="form-control" id="reason" name="reason" placeholder="Reason">
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <input type="text" class="form-control" id="description" name="description" placeholder="Description">
-        </div>
-        <div class="form-group">
-            <label for="person">Person</label>
-            <input type="text" class="form-control" id="person" name="person" placeholder="Person">
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
-        </div>
-        <div class="form-group">
-            <label for="mail">Mail</label>
-            <input type="text" class="form-control" id="mail" name="mail" placeholder="Mail">
-        </div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="border-2 border-sky-400 hover:shadow-sky-400/40 hover:bg-sky-400 py-2 px-4 rounded-lg">Create</button>
     </form>
 </main>
 
