@@ -3,7 +3,7 @@
 <main class="p-5">
     <form action="?action=store" method="POST" class="flex flex-col gap-5">
         <div class="grid grid-cols-3">
-            <div class="span-1 flex flex-col gap-2">
+            <div class="col-span-1 flex flex-col gap-2">
                 <label for="name">Name</label>
                 <label for="species">Species</label>
                 <label for="breed">Breed</label>
@@ -15,7 +15,7 @@
                 <label for="phone">Phone</label>
                 <label for="mail">Mail</label>
             </div>
-            <div class="span-2 flex flex-col gap-2">
+            <div class="col-span-2 flex flex-col gap-2">
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                 <input type="text" class="form-control" id="species" name="species" placeholder="Species">
                 <input type="text" class="form-control" id="breed" name="breed" placeholder="Breed">
@@ -28,7 +28,7 @@
                 <input type="text" class="form-control" id="mail" name="mail" placeholder="Mail">
             </div>
         </div>
-        <div class="flex w-full gap-4">
+        <div class="flex w-full gap-4 flex-col sm:flex-row">
             <div class="flex flex-1 gap-4">
                 <a class="border-2 border-gray-200 block hover:shadow-gray-200/40 hover:bg-gray-200 py-2 px-4 rounded-lg flex-1 text-center" href="./">
                     Cancel
