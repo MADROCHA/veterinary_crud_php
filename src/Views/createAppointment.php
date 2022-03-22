@@ -28,7 +28,15 @@
                 <input type="text" class="form-control" id="mail" name="mail" placeholder="Mail">
             </div>
         </div>
-        <button type="submit" class="border-2 border-sky-400 hover:shadow-sky-400/40 hover:bg-sky-400 py-2 px-4 rounded-lg">Create</button>
+        <div class="flex w-full gap-4">
+            <div class="flex flex-1 gap-4">
+                <a class="border-2 border-gray-200 block hover:shadow-gray-200/40 hover:bg-gray-200 py-2 px-4 rounded-lg flex-1 text-center" href="./">
+                    Cancel
+                </a>
+                <button type="reset" class="border-2 border-gray-200 hover:shadow-gray-200/40 hover:bg-gray-200 py-2 px-4 rounded-lg flex-1">Reset</button>
+            </div>
+            <button type="submit" class="border-2 border-sky-400 hover:shadow-sky-400/40 hover:bg-sky-400 py-2 px-4 rounded-lg flex-1">Create</button>
+        </div>
     </form>
 </main>
 
