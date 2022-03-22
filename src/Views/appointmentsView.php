@@ -28,7 +28,7 @@
                 // print id, name, species, breed, date, time, reason, description, person, phone, mail, created_at, updated_at
                 echo <<<TAG
                   <div class="border-2 border-{$color} max-w-2xl rounded-3xl overflow-hidden px-6 py-4 hover:shadow-lg hover:shadow-{$color}/40 place-self-stretch">
-                  <div class="flex justify-between">
+                  <div class="flex justify-between gap-2 sm:gap-4">
                     <div class="bg-{$color} -mt-4 -ml-6 px-6 py-4 rounded-br-3xl flex-1">
                       <h2 class="text-4xl font-black">{$appointment->getName()}</h2>
                       <p class="text-lg">
@@ -40,6 +40,10 @@
                       <h4 class="text-lg">Cita</h4>
                       <p>{$appointment->getDate()}</p>
                       <p>{$appointment->getTime()}</p>
+                    </div>
+                    <div class="-mt-4 -mr-6 w-12 rounded-bl-xl flex flex-col justify-between border-l-2 border-b-2 border-{$color} overflow-hidden">
+                      <div class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer border-b-2 border-{$color}">X</div>
+                      <div class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer">e</div>
                     </div>
                   </div>
                   <div class="my-2">
