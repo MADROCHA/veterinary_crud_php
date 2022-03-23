@@ -1,4 +1,4 @@
-<?php required_once('src\Views\Components\layout.php'); ?>
+<?php require_once('src\Views\Components\layout.php'); ?>
 
 <main class="p-5">
     <form action="?action=update&id=<?php echo $data["appointment"]->getId() ?>" method="POST" class="flex flex-col gap-5">
@@ -40,4 +40,4 @@
     </form>
 </main>
 
-<?php required_once('src\Views\Components\footer.php'); ?>
+<?php require_once('src\Views\Components\footer.php'); ?>
