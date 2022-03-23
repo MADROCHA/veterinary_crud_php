@@ -3,6 +3,8 @@
     <h1 class="text-xl font-bold uppercase text-center">Citas animalillos</h1>
     <div class="grid gap-4 justify-around my-5 lg:grid-cols-2">
         <?php
+            $editIcon = 'assets\svg\edit.svg';
+            $deleteIcon = 'assets\svg\trash.svg';
             foreach ($data["appointments"] as $appointment) {
                 $printBreed = "";
                 $color = "";
@@ -42,8 +44,12 @@
                       <p>{$appointment->getTime()}</p>
                     </div>
                     <div class="-mt-4 -mr-6 w-12 rounded-bl-xl flex flex-col justify-between border-l-2 border-b-2 border-{$color} overflow-hidden">
-                      <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer border-b-2 border-{$color}" href='?action=delete&id={$appointment->getId()}'>X</a>
-                      <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer" href='?action=edit&id={$appointment->getId()}'>e</a>
+                      <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer border-b-2 border-{$color}" href='?action=delete&id={$appointment->getId()}'>
+                          <img class="w-6" src="{$deleteIcon}" alt="delete">
+                      </a>
+                      <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer" href='?action=edit&id={$appointment->getId()}'>
+                          <img class="w-5" src="{$editIcon}" alt="Editar">
+                      </a>
                     </div>
                   </div>
                   <div class="my-2">
