@@ -17,7 +17,13 @@
             </div>
             <div class="col-span-2 flex flex-col gap-2">
                 <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="text" id="species" name="species" placeholder="Species" required>
+                <select id="species" name="species" placeholder="Species" required>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="reptile">Reptile</option>
+                    <option value="bird">Bird</option>
+                    <option value="unicorn">Unicorn</option>
+                </select>
                 <input type="text" id="breed" name="breed" placeholder="Breed">
                 <input type="date" id="date" name="date" placeholder="Date" required>
                 <input type="time" id="time" name="time" placeholder="Time" required>

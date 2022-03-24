@@ -12,19 +12,19 @@
                     $printBreed = " - <span>{$appointment->getBreed()}</span>";
                 }
                 
-                if ($appointment->getSpecies() == "dog") {
+                if ($appointment->getSpecies() == "Dog") {
                     $color = "[#f7d08a]";
                 }
-                if ($appointment->getSpecies() == "cat") {
+                if ($appointment->getSpecies() == "Cat") {
                     $color = "[#f79f79]";
                 }
-                if ($appointment->getSpecies() == "reptile") {
+                if ($appointment->getSpecies() == "Reptile") {
                     $color = "[#87b6a7]";
                 }
-                if ($appointment->getSpecies() == "bird") {
+                if ($appointment->getSpecies() == "Bird") {
                     $color = "[#c7aaec]";
                 }
-                if ($appointment->getSpecies() == "unicorn") {
+                if ($appointment->getSpecies() == "Unicorn") {
                     $color = "[#afc2d5]";
                 }
                 // print id, name, species, breed, date, time, reason, description, person, phone, mail, created_at, updated_at

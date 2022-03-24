@@ -17,7 +17,13 @@
             </div>
             <div class="col-span-2 flex flex-col gap-2">
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="<?php echo $data['appointment']->getName() ?>" required>
-                <input type="text" class="form-control" id="species" name="species" placeholder="Species" value="<?php echo $data['appointment']->getSpecies() ?>" required>
+                <select id="species" name="species" placeholder="Species" required>
+                    <option value="dog" <?php if ($data['appointment']->getSpecies() == "Dog") {echo 'selected="selected"';} ?>>Dog</option>
+                    <option value="cat" <?php if ($data['appointment']->getSpecies() == "Cat") {echo 'selected="selected"';} ?>>Cat</option>
+                    <option value="reptile" <?php if ($data['appointment']->getSpecies() == "Reptile") {echo 'selected="selected"';} ?>>Reptile</option>
+                    <option value="bird" <?php if ($data['appointment']->getSpecies() == "Bird") {echo 'selected="selected"';} ?>>Bird</option>
+                    <option value="unicorn" <?php if ($data['appointment']->getSpecies() == "Unicorn") {echo 'selected="selected"';} ?>>Unicorn</option>
+                </select>
                 <input type="text" class="form-control" id="breed" name="breed" placeholder="Breed" value="<?php echo $data['appointment']->getBreed() ?>">
                 <input type="date" class="form-control" id="date" name="date" placeholder="Date" value="<?php echo $data['appointment']->getDate() ?>" required>
                 <input type="time" class="form-control" id="time" name="time" placeholder="Time" value="<?php echo $data['appointment']->getTime() ?>" required>
