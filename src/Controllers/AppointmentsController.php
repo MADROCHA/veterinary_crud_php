@@ -71,7 +71,6 @@ class AppointmentsController {
     }
 
     public function store(array $request) {
-        // $this->validateForm($request, 'store');
         $newAppointment = new Appointment(
             null,
             $request['name'],
@@ -102,8 +101,6 @@ class AppointmentsController {
     }
 
     public function update(array $request, $id) {
-        // $this->validateForm($request, 'update', $id);
-
         $appointmentUpdate = new Appointment();
         $appointment = $appointmentUpdate->findById($id);
 
@@ -125,34 +122,6 @@ class AppointmentsController {
         // $appointment->update();
         // header("Location: ./");
     }
-
-    /* public function validateForm(array $request, $action, $id = null) {
-        $errors = [];
-
-        $this->validateText($request['name'], 'name', $errors);
-        $this->validateSpecies($request['species'], $errors);
-        $this->validateText($request['breed'], 'breed', $errors);
-        $this->validateDate($request['date'], $errors);
-        $this->validateTime($request['time'], $errors);
-        $this->validateReason($request['reason'], $errors);
-        $this->validateText($request['person'], 'person', $errors);
-        $this->validatePhone($request['phone'], $errors);
-        $this->validateMail($request['mail'], $errors);
-        
-        if ($errors != [] && $action == 'store') {
-            new View('createAppointment', ['errors' => $errors]);
-        }
-        if ($errors != [] && $action == 'update') {
-            new View('editAppointment', ['errors' => $errors, 'appointment' => $request]);
-        }
-
-        if ($errors == [] && $action == 'store') {
-            $this->store($request);
-        }
-        if ($errors == [] && $action == 'update') {
-            $this->update($request, $id);
-        }
-    } */
 
     public function validateForm($validation, $action) {
         $errors = [];
@@ -239,7 +208,7 @@ class AppointmentsController {
     }
 
     public function validatePhone($request, $errors) {
-        if (empty($request)) {
+        if (empty($request) || $request == '') {
             $errors['phone'] = "Phone is required";
         }
         if (!preg_match("/^[0-9]{9}$/", $request)) {
