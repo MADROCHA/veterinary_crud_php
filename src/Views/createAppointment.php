@@ -37,6 +37,16 @@
                 <input type="text" id="person" name="person" placeholder="Person" required>
                 <input type="text" id="phone" name="phone" placeholder="Phone" required>
                 <input type="text" id="mail" name="mail" placeholder="Mail" required>
+                <?php
+                    // if $data['errors'] isn't empty, null or undefined then display the errors
+                    if (!empty($data['errors'])) {
+                        echo '<div class="text-red-700 text-sm bg-red-200 rounded-sm">';
+                        foreach ($data['errors'] as $error) {
+                            echo "<p>{$error}</p>";
+                        }
+                        echo '</div>';
+                    }
+                ?>
             </div>
         </div>
         <div class="flex w-full gap-4 flex-col sm:flex-row">
