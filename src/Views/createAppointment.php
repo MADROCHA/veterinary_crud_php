@@ -35,7 +35,7 @@
                 </a>
                 <button type="reset" class="border-2 border-gray-200 hover:shadow-gray-200/40 hover:bg-gray-200 py-2 px-4 rounded-lg flex-1">Reset</button>
             </div>
-            <button type="submit" class="border-2 border-sky-400 hover:shadow-sky-400/40 hover:bg-sky-400 py-2 px-4 rounded-lg flex-1">Create</button>
+            <button type="submit" class="border-2 border-[#e3f09b] hover:shadow-[#e3f09b]/40 hover:bg-[#e3f09b] py-2 px-4 rounded-lg flex-1">Create</button>
         </div>
     </form>
 </main>

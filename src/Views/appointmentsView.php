@@ -71,8 +71,8 @@
             }
         ?>
     </div>
-    <div class="fixed bottom-6 right-5">
-        <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="?action=create" href='?action=create'>New appointment</a>
+    <div class="fixed bottom-8 right-5">
+        <a class="border-2 border-[#c5d668] hover:shadow-[#c5d668]/40 bg-[#c5d668] py-2 px-4 rounded-lg" href="?action=create" href='?action=create'>New appointment</a>
     </div>
 </main>
 
