@@ -29,9 +29,9 @@
                 }
                 // print id, name, species, breed, date, time, reason, description, person, phone, mail, created_at, updated_at
                 echo <<<TAG
-                  <div class="border-2 border-{$color} max-w-2xl rounded-3xl overflow-hidden px-6 py-4 hover:shadow-lg hover:shadow-{$color}/40 place-self-stretch">
+                  <div class="border-2 border-{$color} max-w-2xl rounded-3xl overflow-hidden px-3 py-2 sm:px-6 sm:py-4 hover:shadow-lg hover:shadow-{$color}/40 place-self-stretch">
                   <div class="flex justify-between gap-2 sm:gap-4">
-                    <div class="bg-{$color} -mt-4 -ml-6 px-6 py-4 rounded-br-3xl flex-1">
+                    <div class="bg-{$color} -mt-2 -ml-3 px-3 py-2 sm:-mt-4 sm:-ml-6 sm:px-6 sm:py-4 rounded-br-3xl flex-1">
                       <h2 class="text-xl sm:text-4xl font-black">{$appointment->getName()}</h2>
                       <p class="text-lg">
                         <span>{$appointment->getSpecies()}</span>
@@ -43,7 +43,7 @@
                       <p>{$appointment->getDate()}</p>
                       <p>{$appointment->getTime()}</p>
                     </div>
-                    <div class="-mt-4 -mr-6 w-12 rounded-bl-xl flex flex-col justify-between border-l-2 border-b-2 border-{$color} overflow-hidden">
+                    <div class="-mt-2 -mr-3 sm:-mt-4 sm:-mr-6 w-12 rounded-bl-xl flex flex-col justify-between border-l-2 border-b-2 border-{$color} overflow-hidden">
                       <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer border-b-2 border-{$color}" href='?action=confirmDelete&id={$appointment->getId()}'>
                           <img class="w-6" src="{$deleteIcon}" alt="delete">
                       </a>
