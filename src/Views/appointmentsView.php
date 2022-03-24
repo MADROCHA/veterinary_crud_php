@@ -32,7 +32,7 @@
                   <div class="border-2 border-{$color} max-w-2xl rounded-3xl overflow-hidden px-6 py-4 hover:shadow-lg hover:shadow-{$color}/40 place-self-stretch">
                   <div class="flex justify-between gap-2 sm:gap-4">
                     <div class="bg-{$color} -mt-4 -ml-6 px-6 py-4 rounded-br-3xl flex-1">
-                      <h2 class="text-4xl font-black">{$appointment->getName()}</h2>
+                      <h2 class="text-xl sm:text-4xl font-black">{$appointment->getName()}</h2>
                       <p class="text-lg">
                         <span>{$appointment->getSpecies()}</span>
                         {$printBreed}
@@ -53,7 +53,7 @@
                     </div>
                   </div>
                   <div class="my-2">
-                    <h3 class="text-xl font-black">{$appointment->getReason()}</h3>
+                    <h3 class=g"text-lg sm:text-xl font-black">{$appointment->getReason()}</h3>
                     <p class="">
                       {$appointment->getDescription()}
                     </p>
