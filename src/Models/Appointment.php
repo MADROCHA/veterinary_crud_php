@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Core\View;
+
 use App\Database;
 
 class Appointment {  
