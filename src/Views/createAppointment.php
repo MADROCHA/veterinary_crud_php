@@ -1,7 +1,7 @@
 <?php require_once('src\Views\Components\layout.php'); ?>
 
 <main class="p-5 min-h-screen">
-    <form action="?action=store" method="POST" class="flex flex-col gap-5">
+    <form action="?action=store" method="POST" class="flex flex-col gap-5 max-w-lg mx-auto sm:mt-20">
         <div class="grid grid-cols-3">
             <div class="col-span-1 flex flex-col gap-2">
                 <label for="name">Name *</label>
