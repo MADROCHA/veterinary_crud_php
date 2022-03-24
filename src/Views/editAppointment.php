@@ -17,17 +17,22 @@
             </div>
             <div class="col-span-2 flex flex-col gap-2">
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="<?php echo $data['appointment']->getName() ?>" required>
-                <select id="species" name="species" placeholder="Species" required>
-                    <option value="dog" <?php if ($data['appointment']->getSpecies() == "Dog") {echo 'selected="selected"';} ?>>Dog</option>
-                    <option value="cat" <?php if ($data['appointment']->getSpecies() == "Cat") {echo 'selected="selected"';} ?>>Cat</option>
-                    <option value="reptile" <?php if ($data['appointment']->getSpecies() == "Reptile") {echo 'selected="selected"';} ?>>Reptile</option>
-                    <option value="bird" <?php if ($data['appointment']->getSpecies() == "Bird") {echo 'selected="selected"';} ?>>Bird</option>
-                    <option value="unicorn" <?php if ($data['appointment']->getSpecies() == "Unicorn") {echo 'selected="selected"';} ?>>Unicorn</option>
+                <select id="species" name="species" required>
+                    <option value="Dog" <?php if ($data['appointment']->getSpecies() == "Dog") {echo 'selected="selected"';} ?>>Dog</option>
+                    <option value="Cat" <?php if ($data['appointment']->getSpecies() == "Cat") {echo 'selected="selected"';} ?>>Cat</option>
+                    <option value="Reptile" <?php if ($data['appointment']->getSpecies() == "Reptile") {echo 'selected="selected"';} ?>>Reptile</option>
+                    <option value="Bird" <?php if ($data['appointment']->getSpecies() == "Bird") {echo 'selected="selected"';} ?>>Bird</option>
+                    <option value="Unicorn" <?php if ($data['appointment']->getSpecies() == "Unicorn") {echo 'selected="selected"';} ?>>Unicorn</option>
                 </select>
                 <input type="text" class="form-control" id="breed" name="breed" placeholder="Breed" value="<?php echo $data['appointment']->getBreed() ?>">
                 <input type="date" class="form-control" id="date" name="date" placeholder="Date" value="<?php echo $data['appointment']->getDate() ?>" required>
                 <input type="time" class="form-control" id="time" name="time" placeholder="Time" value="<?php echo $data['appointment']->getTime() ?>" required>
-                <input type="text" class="form-control" id="reason" name="reason" placeholder="Reason" value="<?php echo $data['appointment']->getReason() ?>" required>
+                <select id="reason" name="reason" required>
+                    <option value="Urgency" <?php if ($data['appointment']->getReason() == "Urgency") {echo 'selected="selected"';} ?>>Urgency</option>
+                    <option value="Vaccine" <?php if ($data['appointment']->getReason() == "Vaccine") {echo 'selected="selected"';} ?>>Vaccine</option>
+                    <option value="Rutinary" <?php if ($data['appointment']->getReason() == "Rutinary") {echo 'selected="selected"';} ?>>Rutinary</option>
+                    <option value="Others" <?php if ($data['appointment']->getReason() == "Others") {echo 'selected="selected"';} ?>>Others</option>
+                </select>
                 <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $data['appointment']->getDescription() ?>">
                 <input type="text" class="form-control" id="person" name="person" placeholder="Person" value="<?php echo $data['appointment']->getPerson() ?>" required>
                 <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" value="<?php echo $data['appointment']->getPhone() ?>" required>
