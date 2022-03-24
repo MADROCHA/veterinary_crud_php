@@ -7,7 +7,7 @@ use App\Models\Appointment;
 
 class AppointmentsController {
     public function __construct() {
-        // confirmDelete
+        
         if (isset($_GET['action']) && $_GET['action'] == 'confirmDelete') {
             $this->confirmDelete($_GET["id"]);
             return;
@@ -37,8 +37,11 @@ class AppointmentsController {
             $this->update($_POST, $_GET["id"]);
             return;
         }
-
-        $this->index();   
+                
+        if (!isset($_GET['action'])) {
+            $this->index();
+            return;
+        }
     }
     
     public function index() {
@@ -60,7 +63,7 @@ class AppointmentsController {
         $appointment = $appointmentDelete->findById($id);
         $appointment->delete();
 
-        $this->index();
+        header("Location: ./");
     }
 
     public function create() {
@@ -85,7 +88,7 @@ class AppointmentsController {
         );
 
         $newAppointment->save();
-        $this->index();
+        header("Location: ./");
     }
 
     public function edit($id) {
@@ -113,7 +116,7 @@ class AppointmentsController {
         );
 
         $appointment->update();
-        $this->index();
+        header("Location: ./");
     }
 }
 
