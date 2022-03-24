@@ -28,10 +28,10 @@
                 <input type="date" id="date" name="date" placeholder="Date" required>
                 <input type="time" id="time" name="time" placeholder="Time" required>
                 <select id="reason" name="reason" required>
-                    <option value="urgency">Urgency</option>
-                    <option value="vaccine">Vaccine</option>
-                    <option value="rutinary">Rutinary</option>
-                    <option value="others">Others</option>
+                    <option value="Urgency">Urgency</option>
+                    <option value="Vaccine">Vaccine</option>
+                    <option value="Rutinary">Rutinary</option>
+                    <option value="Others">Others</option>
                 </select>
                 <input type="text" id="description" name="description" placeholder="Description">
                 <input type="text" id="person" name="person" placeholder="Person" required>
