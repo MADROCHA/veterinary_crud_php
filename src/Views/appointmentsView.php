@@ -39,7 +39,7 @@
                       </p>
                     </div>
                     <div class="flex flex-col items-end text-sm flex-1">
-                      <h4 class="text-lg">Appointment</h4>
+                      <h4 class="text-base">Appointment</h4>
                       <p>{$appointment->getDate()}</p>
                       <p>{$appointment->getTime()}</p>
                     </div>
@@ -53,7 +53,7 @@
                     </div>
                   </div>
                   <div class="my-2">
-                    <h3 class=g"text-lg sm:text-xl font-black">{$appointment->getReason()}</h3>
+                    <h3 class="text-lg sm:text-xl font-black">{$appointment->getReason()}</h3>
                     <p class="">
                       {$appointment->getDescription()}
                     </p>
