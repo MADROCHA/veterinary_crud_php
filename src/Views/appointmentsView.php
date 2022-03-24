@@ -45,10 +45,10 @@
                     </div>
                     <div class="-mt-2 -mr-3 sm:-mt-4 sm:-mr-6 w-12 rounded-bl-xl flex flex-col justify-between border-l-2 border-b-2 border-{$color} overflow-hidden">
                       <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer border-b-2 border-{$color}" href='?action=confirmDelete&id={$appointment->getId()}'>
-                          <img class="w-6" src="{$deleteIcon}" alt="delete">
+                          <img class="w-5 sm:w-6" src="{$deleteIcon}" alt="delete">
                       </a>
                       <a class="flex place-items-center justify-center flex-1 hover:bg-{$color} hover:cursor-pointer" href='?action=edit&id={$appointment->getId()}'>
-                          <img class="w-5" src="{$editIcon}" alt="Editar">
+                          <img class="w-4 sm:w-5" src="{$editIcon}" alt="Editar">
                       </a>
                     </div>
                   </div>
