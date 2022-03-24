@@ -4,7 +4,7 @@
 This project is part of a formation course by FactoriaF5 where de main goal is to adquire the ability to create a fully functional database which can be accessed by the MVC (Model View Controller) method using PHP and give the user the ability to do the CRUD (Create, Read, Update and Delete).
 The project was done in group of 5 people using the SCRUM method.
 
-##The app
+## The app
 Pup vet is an easy and agile way to organise appointments. It's ment to be an internal aplication for a veterinary so the person who takes the apointments can add, delete, modify and see the apointmens in a clean user friendly interface.
 
 ## The repo structure
@@ -46,8 +46,8 @@ The next step will be creating the database so you should open a server administ
     COMMIT;
 ```
 
-Now you´re all set, the last thing would be accesing your localhost by writing the next command in your terminal "php -S localhost:(choose a port)" then just follow the link from the terminal.
-Keep in mind that you should choose a port for your loclhost to work for example "php -S localhost:8000".
+Now you´re all set, the last thing would be accesing your localhost by writing the next command in your terminal `php -S localhost:"choose a port"` then just follow the link from the terminal.
+Keep in mind that you should choose a port for your localhost to work for example `php -S localhost:8000`.
 
 ## Future versions
 For next versions our team wants to add a filter for the appointments so the user will be able to filter the appointment cards depending on the date they were made or the date of the appointment.
