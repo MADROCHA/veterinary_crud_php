@@ -46,7 +46,7 @@ The next step will be creating the database so you should open a server administ
     COMMIT;
 ```
 
-Now you´re all set, the last thing would be accesing your localhost by writing the next command in your terminal `php -S localhost:"choose a port"` then just follow the link from the terminal.
+Now you're all set, the last thing would be accesing your localhost by writing the next command in your terminal `php -S localhost:"choose a port"` then just follow the link from the terminal.
 Keep in mind that you should choose a port for your localhost to work for example `php -S localhost:8000`.
 
 ## Future versions
