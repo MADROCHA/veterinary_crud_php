@@ -1,5 +1,5 @@
 <?php require_once('src\Views\Components\layout.php'); ?>
-<main class="p-5">
+<main class="p-5 min-h-screen">
     <h1 class="text-xl font-bold uppercase text-center">Citas animalillos</h1>
     <div class="grid gap-4 justify-around my-5 lg:grid-cols-2">
         <?php

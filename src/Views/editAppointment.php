@@ -1,6 +1,6 @@
 <?php require_once('src\Views\Components\layout.php'); ?>
 
-<main class="p-5">
+<main class="p-5 min-h-screen">
     <form action="?action=update&id=<?php echo $data["appointment"]->getId() ?>" method="POST" class="flex flex-col gap-5">
         <div class="grid grid-cols-3">
             <div class="col-span-1 flex flex-col gap-2">
