@@ -1,6 +1,6 @@
 <?php require_once('src\Views\Components\layout.php'); ?>
 <main class="p-5 min-h-screen">
-    <h1 class="text-xl font-bold uppercase text-center">Citas animalillos</h1>
+    <h1 class="text-xl font-bold uppercase text-center">Animal's Appointments</h1>
     <div class="grid gap-4 justify-around my-5 lg:grid-cols-2">
         <?php
             $editIcon = 'assets\svg\edit.svg';
@@ -39,7 +39,7 @@
                       </p>
                     </div>
                     <div class="flex flex-col items-end text-sm flex-1">
-                      <h4 class="text-lg">Cita</h4>
+                      <h4 class="text-lg">Appointment</h4>
                       <p>{$appointment->getDate()}</p>
                       <p>{$appointment->getTime()}</p>
                     </div>
@@ -59,7 +59,7 @@
                     </p>
                   </div>
                   <div class="text-gray-500">
-                    <p>Demanada: {$appointment->getCreatedAt()}</p>
+                    <p>Created at: {$appointment->getCreatedAt()}</p>
                   </div>
                   <div class="flex flex-col justify-between text-gray-500 sm:flex-row mt-2 gap-x-8">
                     <p>{$appointment->getPerson()}</p>
