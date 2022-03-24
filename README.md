@@ -16,7 +16,7 @@ This is a public repo so anyone who wants to usit feel free to clone it.
 `git clone https://github.com/MADROCHA/veterinary_crud_php.git`
 If you want to use this repo you should have the last version of [composer](https://getcomposer.org/ "composer") and install it using composer install in the VScode terminal for example. 
 This will add the vendor folder to the project which is needed for it to work. 
-The next step will be creating the database so you should open a server administrator and create the database with the name "veterinary" in phpMyAdmin then use the following SQL code in veterinary database to create the table:
+The next step will be creating the database so you should open a server administrator and create the database with the name "veterinary" in phpMyAdmin then copy the following SQL code in veterinary database to create the table:
 ```
     SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
     SET AUTOCOMMIT = 0;
@@ -46,7 +46,8 @@ The next step will be creating the database so you should open a server administ
     COMMIT;
 ```
 
-Now you´re all set, the last thing would be accesing your localhost and chose a port to display it so you can try the app.
+Now you´re all set, the last thing would be accesing your localhost by writing the next command in your terminal "php -S localhost:(choose a port)" then just follow the link from the terminal.
+Keep in mind that you should choose a port for your loclhost to work for example "php -S localhost:8000".
 
 ## Future versions
 For next versions our team wants to add a filter for the appointments so the user will be able to filter the appointment cards depending on the date they were made or the date of the appointment.
