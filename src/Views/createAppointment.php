@@ -18,11 +18,11 @@
             <div class="col-span-2 flex flex-col gap-2">
                 <input type="text" id="name" name="name" placeholder="Name" required>
                 <select id="species" name="species" required>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="reptile">Reptile</option>
-                    <option value="bird">Bird</option>
-                    <option value="unicorn">Unicorn</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Reptile">Reptile</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Unicorn">Unicorn</option>
                 </select>
                 <input type="text" id="breed" name="breed" placeholder="Breed">
                 <input type="date" id="date" name="date" placeholder="Date" required>
