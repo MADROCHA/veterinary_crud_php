@@ -7,6 +7,12 @@ use App\Models\Appointment;
 
 class AppointmentsController {
     public function __construct() {
+        // confirmDelete
+        if (isset($_GET['action']) && $_GET['action'] == 'confirmDelete') {
+            $this->confirmDelete($_GET["id"]);
+            return;
+        }
+
         if (isset($_GET['action']) && ($_GET['action'] == 'delete')) {
             $this->delete($_GET["id"]);
             return;
@@ -40,6 +46,13 @@ class AppointmentsController {
         $appointments = $appointment->all();
 
         new View("appointmentsView", ["appointments" => $appointments]);
+    }
+
+    public function confirmDelete($id) {
+        $appointmentConfirmDelete = new Appointment();
+        $appointment = $appointmentConfirmDelete->findById($id);
+
+        new View("appointmentsConfirmDelete", ['appointment' => $appointment]);
     }
 
     public function delete($id) {
