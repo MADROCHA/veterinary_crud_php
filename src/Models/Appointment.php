@@ -6,19 +6,19 @@ namespace App\Models;
 use App\Database;
 
 class Appointment {  
-    private ?int $id; 
-    private string $name;
-    private string $species;
-    private string $breed;
-    private string $date;
-    private string $time;
-    private string $reason;
-    private string $description;
-    private string $person;
-    private string $phone;
-    private string $mail;
-    private string $created_at;
-    private string $updated_at;
+    public ?int $id; 
+    public string $name;
+    public string $species;
+    public string $breed;
+    public string $date;
+    public string $time;
+    public string $reason;
+    public string $description;
+    public string $person;
+    public string $phone;
+    public string $mail;
+    public string $created_at;
+    public string $updated_at;
     
     private $database;
     private $table = 'appointmentsvet';
