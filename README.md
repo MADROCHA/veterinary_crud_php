@@ -7,6 +7,13 @@ The project was done in group of 5 people using the SCRUM method.
 ## The app
 Pup vet is an easy and agile way to organise appointments. It's ment to be an internal aplication for a veterinary so the person who takes the apointments can add, delete, modify and see the apointmens in a clean user friendly interface.
 
+![](assets/img/main.png)
+![](assets/img/create.png)
+![](assets/img/edit.png)
+![](assets/img/delete.png)
+![](assets/img/responsive.png)
+
+
 ## The repo structure
 This repo contains several documents and folders. We've separated de MVC documents in diferent folders, wich are: Models, View, Controllers, Core all of them inserted in the \src folder with the database.php and the index.php documents.
 Outside \src there are the index.php and Composer.json documents.
